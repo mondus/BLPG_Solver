@@ -22,7 +22,11 @@
 #include <climits>
 #include <iostream>
 #include "boost/timer/timer.hpp"
-#include "sys/time.h"
+#ifdef WIN32
+	
+#else
+	#include "sys/time.h"
+#endif
 #include "parseBenchmark.h"
 #include "dataStructure.h"
 #include <omp.h>
