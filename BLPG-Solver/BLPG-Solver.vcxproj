@@ -20,6 +20,7 @@
     <CudaCompile Include="simplex.cu" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="glpk_lp_solver.cpp" />
     <ClCompile Include="parseBenchmark.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

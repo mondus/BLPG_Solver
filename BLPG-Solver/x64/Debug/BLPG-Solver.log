@@ -1,12 +1,59 @@
-﻿Build started 15/11/2017 20:19:38.
+﻿Build started 15/11/2017 20:42:23.
      1>Project "E:\Github\BLPG-Solver\BLPG-Solver\BLPG-Solver.vcxproj" on node 2 (Build target(s)).
-     1>Link:
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"E:\Github\BLPG-Solver\/include" /IE:\SDKs\boost_1_57_0 /I"E:\SDKs\glpk-4.63\src" /I"C:\Program Files (x86)\Visual Leak Detector\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include" /Zi /nologo /W3 /WX- /Od /D WIN32 /D WIN64 /D _DEBUG /D _CONSOLE /D _MBCS /D BOOST_UBLAS_USE_INDEXED_ITERATOR /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt glpk_lp_solver.cpp
+         glpk_lp_solver.cpp
+     1>glpk_lp_solver.cpp(68): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>glpk_lp_solver.cpp(70): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>glpk_lp_solver.cpp(105): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>glpk_lp_solver.cpp(106): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>glpk_lp_solver.cpp(160): warning C4267: '+=' : conversion from 'size_t' to 'int', possible loss of data
+     1>glpk_lp_solver.cpp(161): warning C4267: '+=' : conversion from 'size_t' to 'int', possible loss of data
+     1>glpk_lp_solver.cpp(163): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>glpk_lp_solver.cpp(174): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>glpk_lp_solver.cpp(180): warning C4267: 'initializing' : conversion from 'size_t' to 'unsigned int', possible loss of data
+     1>glpk_lp_solver.cpp(199): warning C4018: '<' : signed/unsigned mismatch
+     1>glpk_lp_solver.cpp(245): warning C4018: '<=' : signed/unsigned mismatch
+     1>glpk_lp_solver.cpp(252): warning C4018: '<=' : signed/unsigned mismatch
+       Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Github\BLPG-Solver\x64\Debug\BLPG-Solver.exe" /INCREMENTAL /NOLOGO /LIBPATH:E:\SDKs\boost_1_57_0\stage\lib /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win64" /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64" cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "libboost_timer-vc120-mt-gd-1_57.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Github\BLPG-Solver\x64\Debug\BLPG-Solver.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Github\BLPG-Solver\x64\Debug\BLPG-Solver.lib" /MACHINE:X64 x64\Debug\GPU_Tester.cu.obj
          x64\Debug\simplex.cu.obj
+         x64\Debug\glpk_lp_solver.obj
          x64\Debug\parseBenchmark.obj
-     1>LINK : fatal error LNK1104: cannot open file 'libboost_timer-vc120-mt-gd-1_57.lib'
+     1>GPU_Tester.cu.obj : error LNK2019: unresolved external symbol "class boost::system::error_category const & __cdecl boost::system::system_category(void)" (?system_category@system@boost@@YAAEBVerror_category@12@XZ) referenced in function "void __cdecl boost::system::`dynamic initializer for 'native_ecat''(void)" (??__Enative_ecat@system@boost@@YAXXZ)
+     1>GPU_Tester.cu.obj : error LNK2019: unresolved external symbol "class boost::system::error_category const & __cdecl boost::system::generic_category(void)" (?generic_category@system@boost@@YAAEBVerror_category@12@XZ) referenced in function "void __cdecl boost::system::`dynamic initializer for 'errno_ecat''(void)" (??__Eerrno_ecat@system@boost@@YAXXZ)
+     1>GPU_Tester.cu.obj : error LNK2019: unresolved external symbol "public: struct boost::timer::cpu_times __cdecl boost::timer::cpu_timer::elapsed(void)const " (?elapsed@cpu_timer@timer@boost@@QEBA?AUcpu_times@23@XZ) referenced in function main
+     1>GPU_Tester.cu.obj : error LNK2019: unresolved external symbol "public: void __cdecl boost::timer::cpu_timer::start(void)" (?start@cpu_timer@timer@boost@@QEAAXXZ) referenced in function main
+     1>GPU_Tester.cu.obj : error LNK2019: unresolved external symbol "public: void __cdecl boost::timer::cpu_timer::stop(void)" (?stop@cpu_timer@timer@boost@@QEAAXXZ) referenced in function main
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_create_prob referenced in function "public: void __cdecl glpk_lp_solver::setDefaultObject(void)" (?setDefaultObject@glpk_lp_solver@@QEAAXXZ)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_set_prob_name referenced in function "public: void __cdecl glpk_lp_solver::setConstraints(class math::matrix<double>,class std::vector<double,class std::allocator<double> >,int)" (?setConstraints@glpk_lp_solver@@QEAAXV?$matrix@N@math@@V?$vector@NV?$allocator@N@std@@@std@@H@Z)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_set_obj_dir referenced in function "public: void __cdecl glpk_lp_solver::setConstraints(class math::matrix<double>,class std::vector<double,class std::allocator<double> >,int)" (?setConstraints@glpk_lp_solver@@QEAAXV?$matrix@N@math@@V?$vector@NV?$allocator@N@std@@@std@@H@Z)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_add_rows referenced in function "public: void __cdecl glpk_lp_solver::setConstraints(class math::matrix<double>,class std::vector<double,class std::allocator<double> >,int)" (?setConstraints@glpk_lp_solver@@QEAAXV?$matrix@N@math@@V?$vector@NV?$allocator@N@std@@@std@@H@Z)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_add_cols referenced in function "public: void __cdecl glpk_lp_solver::setConstraints(class math::matrix<double>,class std::vector<double,class std::allocator<double> >,int)" (?setConstraints@glpk_lp_solver@@QEAAXV?$matrix@N@math@@V?$vector@NV?$allocator@N@std@@@std@@H@Z)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_set_row_name referenced in function "public: void __cdecl glpk_lp_solver::setConstraints(class math::matrix<double>,class std::vector<double,class std::allocator<double> >,int)" (?setConstraints@glpk_lp_solver@@QEAAXV?$matrix@N@math@@V?$vector@NV?$allocator@N@std@@@std@@H@Z)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_set_col_name referenced in function "public: void __cdecl glpk_lp_solver::setConstraints(class math::matrix<double>,class std::vector<double,class std::allocator<double> >,int)" (?setConstraints@glpk_lp_solver@@QEAAXV?$matrix@N@math@@V?$vector@NV?$allocator@N@std@@@std@@H@Z)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_set_row_bnds referenced in function "public: void __cdecl glpk_lp_solver::setConstraints(class math::matrix<double>,class std::vector<double,class std::allocator<double> >,int)" (?setConstraints@glpk_lp_solver@@QEAAXV?$matrix@N@math@@V?$vector@NV?$allocator@N@std@@@std@@H@Z)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_set_col_bnds referenced in function "public: void __cdecl glpk_lp_solver::setConstraints(class math::matrix<double>,class std::vector<double,class std::allocator<double> >,int)" (?setConstraints@glpk_lp_solver@@QEAAXV?$matrix@N@math@@V?$vector@NV?$allocator@N@std@@@std@@H@Z)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_set_obj_coef referenced in function "public: void __cdecl glpk_lp_solver::set_obj_coeff(unsigned int,double)" (?set_obj_coeff@glpk_lp_solver@@QEAAXIN@Z)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_set_mat_row referenced in function "public: void __cdecl glpk_lp_solver::join_poly_constraints(class math::matrix<double>,class std::vector<double,class std::allocator<double> >,int)" (?join_poly_constraints@glpk_lp_solver@@QEAAXV?$matrix@N@math@@V?$vector@NV?$allocator@N@std@@@std@@H@Z)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_load_matrix referenced in function "public: void __cdecl glpk_lp_solver::setConstraints(class math::matrix<double>,class std::vector<double,class std::allocator<double> >,int)" (?setConstraints@glpk_lp_solver@@QEAAXV?$matrix@N@math@@V?$vector@NV?$allocator@N@std@@@std@@H@Z)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_delete_prob referenced in function "public: void __cdecl glpk_lp_solver::delete_prob(void)" (?delete_prob@glpk_lp_solver@@QEAAXXZ)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_get_obj_dir referenced in function "public: double __cdecl glpk_lp_solver::solve(void)" (?solve@glpk_lp_solver@@QEAANXZ)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_get_num_rows referenced in function "public: double __cdecl glpk_lp_solver::solve(void)" (?solve@glpk_lp_solver@@QEAANXZ)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_get_num_cols referenced in function "public: double __cdecl glpk_lp_solver::solve(void)" (?solve@glpk_lp_solver@@QEAANXZ)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_get_obj_coef referenced in function "public: double __cdecl glpk_lp_solver::get_obj_coeff(unsigned int)" (?get_obj_coeff@glpk_lp_solver@@QEAANI@Z)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_get_num_nz referenced in function "public: double __cdecl glpk_lp_solver::solve(void)" (?solve@glpk_lp_solver@@QEAANXZ)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_get_mat_row referenced in function "public: double __cdecl glpk_lp_solver::solve(void)" (?solve@glpk_lp_solver@@QEAANXZ)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_simplex referenced in function "public: double __cdecl glpk_lp_solver::solve(void)" (?solve@glpk_lp_solver@@QEAANXZ)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_init_smcp referenced in function "public: void __cdecl glpk_lp_solver::setDefaultObject(void)" (?setDefaultObject@glpk_lp_solver@@QEAAXXZ)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_get_status referenced in function "public: unsigned int __cdecl glpk_lp_solver::getStatus(void)" (?getStatus@glpk_lp_solver@@QEAAIXZ)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_get_obj_val referenced in function "public: double __cdecl glpk_lp_solver::solve(void)" (?solve@glpk_lp_solver@@QEAANXZ)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_get_col_prim referenced in function "public: double __cdecl glpk_lp_solver::get_col_val(int)" (?get_col_val@glpk_lp_solver@@QEAANH@Z)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_free_env referenced in function "public: static void __cdecl glpk_lp_solver::free_environment_glpk_lp_solver(void)" (?free_environment_glpk_lp_solver@glpk_lp_solver@@SAXXZ)
+     1>glpk_lp_solver.obj : error LNK2019: unresolved external symbol glp_term_out referenced in function "public: double __cdecl glpk_lp_solver::Compute_LLP(class std::vector<double,class std::allocator<double> >)" (?Compute_LLP@glpk_lp_solver@@QEAANV?$vector@NV?$allocator@N@std@@@std@@@Z)
+     1>E:\Github\BLPG-Solver\x64\Debug\BLPG-Solver.exe : fatal error LNK1120: 31 unresolved externals
      1>Done Building Project "E:\Github\BLPG-Solver\BLPG-Solver\BLPG-Solver.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:00.42
+Time Elapsed 00:00:02.21
