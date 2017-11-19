@@ -19,9 +19,9 @@ Create a `BOOST_DIR` system environment variable pointing to the boost files loc
 
 	BOOST_DIR=c:\boost_1_57_0
 
-Create a `GLPK_DIR` system environment variable pointing to the glpk `src` directory (the src directory not the root extraction directory) e.g.
+Create a `GLPK_DIR` system environment variable pointing to the main glpk directory (not the src location) e.g.
 
-	GLPK_DIR=c:\glpk-4.63\src
+	GLPK_DIR=c:\glpk-4.63
 
 ## Building
 
