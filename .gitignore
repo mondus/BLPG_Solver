@@ -77,6 +77,10 @@ Temporary Items
 Thumbs.db
 ehthumbs.db
 *.opendb
+*.pdb
+*.suo
+*.db
+*.sdf
 
 # Folder config file
 Desktop.ini
